@@ -1,0 +1,12 @@
+# =============================================================================
+# Cricket Log Semantic Search — Development Dependencies
+# File: requirements/dev.txt
+# =============================================================================
+
+# Include base dependencies
+-r base.txt
+
+# Testing framework & tooling
+pytest==8.4.2
+pytest-mock==3.15.1
+pytest-cov==7.1.0

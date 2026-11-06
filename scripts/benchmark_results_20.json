@@ -1,0 +1,633 @@
+[
+  {
+    "id": "Q01",
+    "category": "1. Semantic Search",
+    "query": "Can you find moments where a player was given out because of an LBW decision?",
+    "description": "LBW dismissals",
+    "gt_count": 63,
+    "intent": "semantic_rag",
+    "engine": "gemini-3.5-flash-lite",
+    "retrieved_ids": [
+      "EVT_0180",
+      "EVT_0200",
+      "EVT_0366",
+      "EVT_0003",
+      "EVT_0046"
+    ],
+    "relevant_retrieved": [
+      "EVT_0180",
+      "EVT_0200",
+      "EVT_0366",
+      "EVT_0003",
+      "EVT_0046"
+    ],
+    "precision_at_k": 1.0,
+    "cited_ids": [
+      "EVT_0180",
+      "EVT_0200",
+      "EVT_0366",
+      "EVT_0003",
+      "EVT_0046"
+    ],
+    "is_grounded": true,
+    "answer": "Yes, the provided records contain several moments where a player was involved in an LBW given decision:\n\n* Player 1 (Team C) was involved in an LBW given decision in over 26 at Stadium 4 [EVT_0180].\n* Player 9 (Team A) performed an LBW given decision in over 2 [EVT_0200].\n* Player 8 (Team D) was involved in an LBW given decision in over 4 at Stadium 2 [EVT_0366].\n* Player 1 (Team C) was involved in an LBW given decision in over 6 [EVT_0003].\n* Player 2 (Team B) was involved in an LBW given decision in over 46 at Stadium 2 [EVT_0046]."
+  },
+  {
+    "id": "Q02",
+    "category": "1. Semantic Search",
+    "query": "Show me instances where the fielding team managed to take a catch.",
+    "description": "Catches taken by fielding team",
+    "gt_count": 40,
+    "intent": "semantic_rag",
+    "engine": "gemini-3.5-flash-lite",
+    "retrieved_ids": [
+      "EVT_0332",
+      "EVT_0455",
+      "EVT_0377",
+      "EVT_0282",
+      "EVT_0026"
+    ],
+    "relevant_retrieved": [
+      "EVT_0332",
+      "EVT_0455",
+      "EVT_0377",
+      "EVT_0282",
+      "EVT_0026"
+    ],
+    "precision_at_k": 1.0,
+    "cited_ids": [
+      "EVT_0332",
+      "EVT_0455",
+      "EVT_0377",
+      "EVT_0282",
+      "EVT_0026"
+    ],
+    "is_grounded": true,
+    "answer": "Based on the provided records, the instances where a catch was taken are:\n\n* **Player 1** (Team A) was involved in a catch taken during over 4 at Stadium 3 [Evidence EVT_0332].\n* **Player 4** (Team D, fielder) took a catch in over 36 [Evidence EVT_0455].\n* **Player 3** (Team B, fielder) took a catch in over 39 [Evidence EVT_0377].\n* **Player 1** (Team B) was involved in a catch taken during over 2 [Evidence EVT_0282].\n* **Player 8** (Team A) performed a catch taken in over 6 [Evidence EVT_0026]."
+  },
+  {
+    "id": "Q03",
+    "category": "1. Semantic Search",
+    "query": "Were there any moments when a player was dismissed through stumping?",
+    "description": "Stumping dismissals",
+    "gt_count": 53,
+    "intent": "semantic_rag",
+    "engine": "gemini-3.5-flash-lite",
+    "retrieved_ids": [
+      "EVT_0009",
+      "EVT_0244",
+      "EVT_0458",
+      "EVT_0128",
+      "EVT_0452"
+    ],
+    "relevant_retrieved": [
+      "EVT_0009",
+      "EVT_0244",
+      "EVT_0458",
+      "EVT_0128",
+      "EVT_0452"
+    ],
+    "precision_at_k": 1.0,
+    "cited_ids": [
+      "EVT_0009",
+      "EVT_0244",
+      "EVT_0458",
+      "EVT_0128",
+      "EVT_0452"
+    ],
+    "is_grounded": true,
+    "answer": "Yes, there are multiple recorded events where a player executed a stumping:\n- Player 1 for Team A executed a stumping resulting in 3 runs in over 7 (confirmed) [Evidence EVT_0009].\n- Player 7 for Team C executed a stumping resulting in 1 run in over 30 (disputed) [Evidence EVT_0244].\n- Player 9 for Team A executed a stumping resulting in 6 runs in over 15 (confirmed) [Evidence EVT_0458].\n- Player 8 for Team C executed a stumping resulting in 1 run in over 43 (confirmed) [Evidence EVT_0128].\n- Player 1 for Team D performed a stumping resulting in 5 runs in over 12 (disputed) [Evidence EVT_0452]."
+  },
+  {
+    "id": "Q04",
+    "category": "1. Semantic Search",
+    "query": "Find incidents where players hit boundaries or sixes.",
+    "description": "Boundaries (4s) or Sixes (6s)",
+    "gt_count": 97,
+    "intent": "semantic_rag",
+    "engine": "gemini-3.5-flash-lite",
+    "retrieved_ids": [
+      "EVT_0271",
+      "EVT_0051",
+      "EVT_0473",
+      "EVT_0012",
+      "EVT_0459"
+    ],
+    "relevant_retrieved": [
+      "EVT_0271",
+      "EVT_0051",
+      "EVT_0473",
+      "EVT_0012",
+      "EVT_0459"
+    ],
+    "precision_at_k": 1.0,
+    "cited_ids": [
+      "EVT_0271",
+      "EVT_0051",
+      "EVT_0473",
+      "EVT_0012",
+      "EVT_0459"
+    ],
+    "is_grounded": true,
+    "answer": "Based on the provided records, the following incidents involve players hitting boundaries or sixes:\n\n* Player 11 (Team A) hit a boundary for 6 runs in over 2 of MATCH006 [Evidence EVT_0271].\n* Player 9 (Team C) hit a boundary for 5 runs in over 38 of MATCH002 [Evidence EVT_0051].\n* Player 10 (Team D) hit a boundary for 4 runs in over 47 of MATCH010 [Evidence EVT_0473].\n* Player 7 (Team C) hit a boundary for 6 runs in over 39 of MATCH001 [Evidence EVT_0012].\n* Player 4 (Team C) hit a boundary for 6 runs in over 49 of MATCH010 [Evidence EVT_0459]."
+  },
+  {
+    "id": "Q05",
+    "category": "1. Semantic Search",
+    "query": "Can you find situations where the batting side received extra runs through wide or no-ball deliveries?",
+    "description": "Extras (wide or no-ball)",
+    "gt_count": 87,
+    "intent": "semantic_rag",
+    "engine": "gemini-3.5-flash-lite",
+    "retrieved_ids": [
+      "EVT_0477",
+      "EVT_0460",
+      "EVT_0229",
+      "EVT_0412",
+      "EVT_0372"
+    ],
+    "relevant_retrieved": [
+      "EVT_0477",
+      "EVT_0460",
+      "EVT_0229",
+      "EVT_0412",
+      "EVT_0372"
+    ],
+    "precision_at_k": 1.0,
+    "cited_ids": [
+      "EVT_0477",
+      "EVT_0460",
+      "EVT_0229",
+      "EVT_0412",
+      "EVT_0372"
+    ],
+    "is_grounded": true,
+    "answer": "Yes, the provided records contain the following situations where extra runs were scored through wide or no-ball deliveries:\n\n* In Match MATCH010, Team D's Player 1 bowled a wide resulting in 6 runs in over 50 [Evidence EVT_0477].\n* In Match MATCH010, Team B's Player 5 bowled a wide resulting in 6 runs in over 20 [Evidence EVT_0460].\n* In Match MATCH009, Team C's Player 10 bowled a no ball resulting in 4 runs in over 2 [Evidence EVT_0412].\n* In Match MATCH008, Team A's Player 7 bowled a wide resulting in 1 run in over 14 [Evidence EVT_0372].\n* In Match MATCH005, Team A's Player 4 bowled a wide resulting in 0 runs in over 20 [Evidence EVT_0229]."
+  },
+  {
+    "id": "Q06",
+    "category": "2. Contextual Understanding",
+    "query": "Were there any incidents that created excitement among the spectators?",
+    "description": "Spectator excitement commentary",
+    "gt_count": 74,
+    "intent": "semantic_rag",
+    "engine": "gemini-3.5-flash-lite",
+    "retrieved_ids": [
+      "EVT_0009",
+      "EVT_0128",
+      "EVT_0161",
+      "EVT_0458",
+      "EVT_0244"
+    ],
+    "relevant_retrieved": [
+      "EVT_0009",
+      "EVT_0128",
+      "EVT_0161",
+      "EVT_0458",
+      "EVT_0244"
+    ],
+    "precision_at_k": 1.0,
+    "cited_ids": [
+      "EVT_0009",
+      "EVT_0128",
+      "EVT_0161",
+      "EVT_0458",
+      "EVT_0244"
+    ],
+    "is_grounded": true,
+    "answer": "Yes, there were multiple incidents that created spectator reactions:\n* Spectators reacted as Player 1 executed a stumping in MATCH001 [Evidence EVT_0009].\n* Spectators reacted as Player 8 executed a stumping in MATCH003 [Evidence EVT_0128].\n* Spectators reacted as Player 2 executed a stumping in MATCH004 [Evidence EVT_0161].\n* Spectators reacted as Player 7 executed a stumping in MATCH005 [Evidence EVT_0244].\n* Spectators reacted as Player 9 executed a stumping in MATCH010 [Evidence EVT_0458]."
+  },
+  {
+    "id": "Q07",
+    "category": "2. Contextual Understanding",
+    "query": "Find moments where more than one cricket event was mentioned in the same commentary.",
+    "description": "Multiple events in single commentary",
+    "gt_count": 100,
+    "intent": "semantic_rag",
+    "engine": "gemini-3.5-flash-lite",
+    "retrieved_ids": [
+      "EVT_0412",
+      "EVT_0190",
+      "EVT_0400",
+      "EVT_0460",
+      "EVT_0062"
+    ],
+    "relevant_retrieved": [
+      "EVT_0412",
+      "EVT_0190",
+      "EVT_0400",
+      "EVT_0460",
+      "EVT_0062"
+    ],
+    "precision_at_k": 1.0,
+    "cited_ids": [
+      "EVT_0412",
+      "EVT_0190",
+      "EVT_0400",
+      "EVT_0460",
+      "EVT_0062"
+    ],
+    "is_grounded": true,
+    "answer": "Based on the provided evidence, the moments where more than one cricket event was mentioned in the same commentary are:\n\n* In over 2 of Match MATCH009, Player 10 performed a no ball and another wicket taken occurred [Evidence EVT_0412].\n* In over 27 of Match MATCH004, Player 11 performed a no ball and another wicket taken occurred [Evidence EVT_0190].\n* In over 9 of Match MATCH008, Player 6 performed a wicket taken and another LBW given occurred [Evidence EVT_0400].\n* In over 20 of Match MATCH010, Player 5 performed a wide and another wicket taken occurred [Evidence EVT_0460].\n* In over 28 of Match MATCH002, Player 9 performed a catch taken and another wicket taken occurred [Evidence EVT_0062]."
+  },
+  {
+    "id": "Q08",
+    "category": "2. Contextual Understanding",
+    "query": "Show me incidents where an unexpected event changed the flow of the game.",
+    "description": "Unexpected event altering flow of game",
+    "gt_count": 83,
+    "intent": "semantic_rag",
+    "engine": "gemini-3.5-flash-lite",
+    "retrieved_ids": [
+      "EVT_0039",
+      "EVT_0007",
+      "EVT_0066",
+      "EVT_0118",
+      "EVT_0379"
+    ],
+    "relevant_retrieved": [
+      "EVT_0039",
+      "EVT_0007",
+      "EVT_0066",
+      "EVT_0118",
+      "EVT_0379"
+    ],
+    "precision_at_k": 1.0,
+    "cited_ids": [
+      "EVT_0039",
+      "EVT_0007",
+      "EVT_0066",
+      "EVT_0118",
+      "EVT_0379"
+    ],
+    "is_grounded": true,
+    "answer": "Based on the provided match records, the following incidents describe an unexpected event altering the flow of the game:\n\n* **MATCH001:** An unexpected stumping by Player 11 (Team C, all-rounder) in over 8 (scoring 6 runs) altered the flow of the game [EVT_0039].\n* **MATCH001:** An unexpected stumping by Player 5 (Team A) in over 33 (scoring 5 runs) altered the flow of the game [EVT_0007].\n* **MATCH002:** An unexpected stumping by Player 2 (Team D, batsman) in over 46 (scoring 0 runs) altered the flow of the game [EVT_0066].\n* **MATCH003:** An unexpected stumping by Player 1 (Team D) in over 45 (scoring 4 runs) altered the flow of the game [EVT_0118].\n* **MATCH008:** An unexpected stumping by Player 1 (Team A) in over 4 (scoring 4 runs) altered the flow of the game [EVT_0379]."
+  },
+  {
+    "id": "Q09",
+    "category": "2. Contextual Understanding",
+    "query": "Find incidents where a player's event was still awaiting review or confirmation.",
+    "description": "Status: pending review or awaiting confirmation",
+    "gt_count": 260,
+    "intent": "semantic_rag",
+    "engine": "gemini-3.5-flash-lite",
+    "retrieved_ids": [
+      "EVT_0271",
+      "EVT_0397",
+      "EVT_0017",
+      "EVT_0012",
+      "EVT_0369"
+    ],
+    "relevant_retrieved": [
+      "EVT_0271",
+      "EVT_0397",
+      "EVT_0017",
+      "EVT_0012",
+      "EVT_0369"
+    ],
+    "precision_at_k": 1.0,
+    "cited_ids": [
+      "EVT_0271",
+      "EVT_0397",
+      "EVT_0017",
+      "EVT_0012",
+      "EVT_0369"
+    ],
+    "is_grounded": true,
+    "answer": "Based on the provided records, the incidents where a player's event was still pending review are:\n\n* In MATCH006, Player 11 (Team A) had a boundary hit event with a status of pending review in over 2 [Evidence EVT_0271].\n* In MATCH008, Player 4 (Team C) had a stumping event with a status of pending review in over 46 [Evidence EVT_0397].\n* In MATCH001, Player 10 (Team C) had an over completed event with a status of pending review in over 13 [Evidence EVT_0017].\n* In MATCH001, Player 7 (Team C) had a boundary hit event with a status of pending review in over 39 [Evidence EVT_0012].\n* In MATCH008, Player 6 (Team C) had a stumping event with a status of pending review in over 27 [Evidence EVT_0369]."
+  },
+  {
+    "id": "Q10",
+    "category": "2. Contextual Understanding",
+    "query": "Were there any controversial or disputed incidents during the matches?",
+    "description": "Disputed / controversial incidents",
+    "gt_count": 127,
+    "intent": "semantic_rag",
+    "engine": "gemini-3.5-flash-lite",
+    "retrieved_ids": [
+      "EVT_0352",
+      "EVT_0183",
+      "EVT_0206",
+      "EVT_0061",
+      "EVT_0098"
+    ],
+    "relevant_retrieved": [
+      "EVT_0352",
+      "EVT_0183",
+      "EVT_0206",
+      "EVT_0061",
+      "EVT_0098"
+    ],
+    "precision_at_k": 1.0,
+    "cited_ids": [
+      "EVT_0352",
+      "EVT_0183",
+      "EVT_0206",
+      "EVT_0061",
+      "EVT_0098"
+    ],
+    "is_grounded": true,
+    "answer": "Yes, there were several disputed incidents during the matches:\n* In MATCH008, Player 4 of Team D had a disputed no ball event in over 2 [EVT_0352].\n* In MATCH004, Player 4 of Team A had a disputed six hit event in over 7 [EVT_0183].\n* In MATCH005, Player 8 of Team D had a disputed boundary hit event in over 13 [EVT_0206].\n* In MATCH002, Player 5 of Team B had a disputed no ball event in over 17 [EVT_0061], and Player 11 of Team D had a disputed boundary hit event in over 31 [EVT_0098]."
+  },
+  {
+    "id": "Q11",
+    "category": "3. Combined Filtering",
+    "query": "In MATCH004, can you find any LBW decisions that were disputed?",
+    "description": "MATCH004 + LBW given + disputed",
+    "gt_count": 3,
+    "intent": "hybrid",
+    "engine": "gemini-3.5-flash-lite",
+    "retrieved_ids": [
+      "EVT_0174",
+      "EVT_0180",
+      "EVT_0200"
+    ],
+    "relevant_retrieved": [
+      "EVT_0174",
+      "EVT_0180",
+      "EVT_0200"
+    ],
+    "precision_at_k": 1.0,
+    "cited_ids": [
+      "EVT_0174",
+      "EVT_0180",
+      "EVT_0200"
+    ],
+    "is_grounded": true,
+    "answer": "Yes, in MATCH004, the following LBW decisions were disputed:\n* Player 10 from Team D was given LBW (scored 0 runs in over 39) [Evidence EVT_0174].\n* Player 1 from Team C was given LBW (scored 0 runs in over 26 at Stadium 4) [Evidence EVT_0180].\n* Player 9 from Team A was given LBW (scored 3 runs in over 2) [Evidence EVT_0200]."
+  },
+  {
+    "id": "Q12",
+    "category": "3. Combined Filtering",
+    "query": "Show me incidents involving all-rounders where a wicket was taken.",
+    "description": "All-rounders + wicket taken",
+    "gt_count": 3,
+    "intent": "semantic_rag",
+    "engine": "gemini-3.5-flash-lite",
+    "retrieved_ids": [
+      "EVT_0202",
+      "EVT_0002",
+      "EVT_0360",
+      "EVT_0359",
+      "EVT_0395"
+    ],
+    "relevant_retrieved": [
+      "EVT_0202",
+      "EVT_0002",
+      "EVT_0360"
+    ],
+    "precision_at_k": 0.6,
+    "cited_ids": [
+      "EVT_0202",
+      "EVT_0002",
+      "EVT_0360",
+      "EVT_0359",
+      "EVT_0395"
+    ],
+    "is_grounded": true,
+    "answer": "Based on the provided records, the incidents involving all-rounders where a wicket was taken are:\n\n* Player 3 (all-rounder) from Team C took a wicket in over 19, adding 5 runs [EVT_0202].\n* Player 7 (all-rounder) from Team C took a wicket in over 33, adding 1 run [EVT_0002].\n* Player 10 (all-rounder) from Team C took a wicket in over 17, adding 2 runs [EVT_0360]."
+  },
+  {
+    "id": "Q13",
+    "category": "3. Combined Filtering",
+    "query": "Were there any six-hit incidents in Stadium 3 during sunny weather?",
+    "description": "six hit + Stadium 3 + sunny",
+    "gt_count": 0,
+    "intent": "semantic_rag",
+    "engine": "gemini-3.5-flash-lite",
+    "retrieved_ids": [
+      "EVT_0344",
+      "EVT_0312",
+      "EVT_0185",
+      "EVT_0195",
+      "EVT_0121"
+    ],
+    "relevant_retrieved": [],
+    "precision_at_k": 0.0,
+    "cited_ids": [
+      "EVT_0344",
+      "EVT_0312",
+      "EVT_0185",
+      "EVT_0195",
+      "EVT_0121"
+    ],
+    "is_grounded": true,
+    "answer": "The provided records do not contain sufficient evidence to answer whether there were any six-hit incidents during sunny weather, as weather information is not mentioned in the evidence [Evidence EVT_0344, Evidence EVT_0312]."
+  },
+  {
+    "id": "Q14",
+    "category": "3. Combined Filtering",
+    "query": "Find wide-ball incidents that happened in the later overs.",
+    "description": "wide + over >= 30",
+    "gt_count": 16,
+    "intent": "semantic_rag",
+    "engine": "gemini-3.5-flash-lite",
+    "retrieved_ids": [
+      "EVT_0477",
+      "EVT_0229",
+      "EVT_0460",
+      "EVT_0024",
+      "EVT_0349"
+    ],
+    "relevant_retrieved": [
+      "EVT_0477",
+      "EVT_0024"
+    ],
+    "precision_at_k": 0.4,
+    "cited_ids": [
+      "EVT_0477",
+      "EVT_0229",
+      "EVT_0460",
+      "EVT_0024",
+      "EVT_0349"
+    ],
+    "is_grounded": true,
+    "answer": "Based on the provided evidence, the wide-ball incidents that occurred in the later overs are:\n\n* Player 4 (Team C) performed a wide in over 45 of MATCH001, resulting in 2 runs [Evidence EVT_0024].\n* Player 1 (Team D) performed a wide in over 50 of MATCH010, resulting in 6 runs [Evidence EVT_0477]."
+  },
+  {
+    "id": "Q15",
+    "category": "3. Combined Filtering",
+    "query": "Can you show me boundary-hit incidents involving Team A players in MATCH007?",
+    "description": "MATCH007 + Team A + boundary hit",
+    "gt_count": 3,
+    "intent": "hybrid",
+    "engine": "gemini-3.5-flash-lite",
+    "retrieved_ids": [
+      "EVT_0302",
+      "EVT_0340",
+      "EVT_0314"
+    ],
+    "relevant_retrieved": [
+      "EVT_0302",
+      "EVT_0340",
+      "EVT_0314"
+    ],
+    "precision_at_k": 1.0,
+    "cited_ids": [
+      "EVT_0302",
+      "EVT_0340",
+      "EVT_0314"
+    ],
+    "is_grounded": true,
+    "answer": "Based on the provided records, the following boundary-hit incidents involved Team A players in MATCH007:\n\n* **Player 10**: Involved in a boundary hit in over 2, scoring 6 runs (status: disputed) [Evidence EVT_0314]. Another boundary hit involving Player 10 occurred in over 10, resulting in 5 runs (status: confirmed) [Evidence EVT_0302].\n* **Player 11**: Executed a boundary hit in over 16, contributing 0 runs (status: verified) [Evidence EVT_0340]."
+  },
+  {
+    "id": "Q16",
+    "category": "4. Answer Generation & Reasoning",
+    "query": "Give me a summary of the different dismissal-related incidents recorded in MATCH008.",
+    "description": "MATCH008 dismissals summary",
+    "gt_count": 28,
+    "intent": "hybrid",
+    "engine": "gemini-3.5-flash-lite",
+    "retrieved_ids": [
+      "EVT_0400",
+      "EVT_0397",
+      "EVT_0385",
+      "EVT_0369",
+      "EVT_0391"
+    ],
+    "relevant_retrieved": [
+      "EVT_0400",
+      "EVT_0397",
+      "EVT_0385",
+      "EVT_0369",
+      "EVT_0391"
+    ],
+    "precision_at_k": 1.0,
+    "cited_ids": [
+      "EVT_0400",
+      "EVT_0397",
+      "EVT_0385",
+      "EVT_0369",
+      "EVT_0391"
+    ],
+    "is_grounded": true,
+    "answer": "Based on the provided records for MATCH008, the following dismissal-related incidents were recorded:\n\n* **Player 6 (Team C):** Recorded a wicket taken in over 9, with a disputed status and a concurrent LBW given [Evidence EVT_0400]. Additionally, Player 6 was involved in a stumping event resulting in 6 runs in over 27, with a status of pending review [Evidence EVT_0369].\n* **Player 4 (Team C):** Recorded a stumping event resulting in 0 runs in over 46, with a status of pending review [Evidence EVT_0397].\n* **Player 11 (Team D):** Recorded a stumping event resulting in 4 runs in over 44, with a verified status [Evidence EVT_0385].\n* **Player 4 (Team D):** Recorded a wicket taken resulting in 4 runs in over 18, with a verified status [Evidence EVT_0391]."
+  },
+  {
+    "id": "Q17",
+    "category": "4. Answer Generation & Reasoning",
+    "query": "Which incidents are still awaiting verification, and what happened in those incidents?",
+    "description": "Pending review incidents & actions",
+    "gt_count": 137,
+    "intent": "semantic_rag",
+    "engine": "gemini-3.5-flash-lite",
+    "retrieved_ids": [
+      "EVT_0010",
+      "EVT_0309",
+      "EVT_0346",
+      "EVT_0122",
+      "EVT_0199"
+    ],
+    "relevant_retrieved": [],
+    "precision_at_k": 0.0,
+    "cited_ids": [
+      "EVT_0010",
+      "EVT_0309",
+      "EVT_0346",
+      "EVT_0122",
+      "EVT_0199"
+    ],
+    "is_grounded": true,
+    "answer": "The provided records do not contain sufficient evidence to answer this question, as all listed events in the evidence are already marked as verified or confirmed [Evidence EVT_0010, EVT_0309, EVT_0346, EVT_0122, EVT_0199]."
+  },
+  {
+    "id": "Q18",
+    "category": "4. Answer Generation & Reasoning",
+    "query": "Compare the types of incidents recorded for Team A and Team B.",
+    "description": "Comparative breakdown for Team A vs Team B",
+    "gt_count": 241,
+    "intent": "hybrid",
+    "engine": "gemini-3.5-flash-lite",
+    "retrieved_ids": [
+      "EVT_0150",
+      "EVT_0183",
+      "EVT_0271",
+      "EVT_0073",
+      "EVT_0497"
+    ],
+    "relevant_retrieved": [
+      "EVT_0150",
+      "EVT_0183",
+      "EVT_0271",
+      "EVT_0073",
+      "EVT_0497"
+    ],
+    "precision_at_k": 1.0,
+    "cited_ids": [
+      "EVT_0150",
+      "EVT_0183",
+      "EVT_0271",
+      "EVT_0073",
+      "EVT_0497"
+    ],
+    "is_grounded": true,
+    "answer": "The provided records do not contain sufficient evidence to answer this question, as there are no recorded incidents or data for Team B in the evidence [EVT_0150, EVT_0183, EVT_0271, EVT_0073, EVT_0497]."
+  },
+  {
+    "id": "Q19",
+    "category": "4. Answer Generation & Reasoning",
+    "query": "Find examples where the commentary mentions one event but also refers to another event in the same over.",
+    "description": "Co-occurring events in same over commentary",
+    "gt_count": 100,
+    "intent": "semantic_rag",
+    "engine": "gemini-3.5-flash-lite",
+    "retrieved_ids": [
+      "EVT_0179",
+      "EVT_0026",
+      "EVT_0200",
+      "EVT_0309",
+      "EVT_0111"
+    ],
+    "relevant_retrieved": [
+      "EVT_0179",
+      "EVT_0026",
+      "EVT_0200",
+      "EVT_0309",
+      "EVT_0111"
+    ],
+    "precision_at_k": 1.0,
+    "cited_ids": [
+      "EVT_0179",
+      "EVT_0026",
+      "EVT_0200",
+      "EVT_0309",
+      "EVT_0111"
+    ],
+    "is_grounded": true,
+    "answer": "Based on the provided evidence, the following examples mention one event while also referring to another event occurring in the same over:\n\n* In MATCH004, the commentary notes that Player 5 performed a run scored while another over completed occurred in over 1 [EVT_0179].\n* In MATCH001, the commentary notes that Player 8 performed a catch taken while another over completed occurred in over 6 [EVT_0026].\n* In MATCH004, the commentary notes that Player 9 was given LBW while another over completed occurred in over 2 [EVT_0200].\n* In MATCH007, the commentary notes that Player 9 performed a stumping while another over completed occurred in over 7 [EVT_0309].\n* In MATCH003, the commentary notes that Player 6 took a wicket while another over completed occurred in over 19 [EVT_0111]."
+  },
+  {
+    "id": "Q20",
+    "category": "4. Answer Generation & Reasoning",
+    "query": "Show me a few examples where the recorded runs were zero and explain what happened in those incidents.",
+    "description": "Zero runs incidents explanation",
+    "gt_count": 82,
+    "intent": "semantic_rag",
+    "engine": "gemini-3.5-flash-lite",
+    "retrieved_ids": [
+      "EVT_0191",
+      "EVT_0340",
+      "EVT_0414",
+      "EVT_0315",
+      "EVT_0018"
+    ],
+    "relevant_retrieved": [
+      "EVT_0191",
+      "EVT_0340",
+      "EVT_0414",
+      "EVT_0315",
+      "EVT_0018"
+    ],
+    "precision_at_k": 1.0,
+    "cited_ids": [
+      "EVT_0191",
+      "EVT_0340",
+      "EVT_0414",
+      "EVT_0315",
+      "EVT_0018"
+    ],
+    "is_grounded": true,
+    "answer": "Based on the provided evidence, here are examples where the recorded runs were zero:\n\n* **MATCH004 (Team D, Over 17):** Player 11 was involved in a run scored event resulting in 0 runs, while a no ball simultaneously occurred [EVT_0191].\n* **MATCH007 (Team A, Over 16):** Player 11 executed a boundary hit that contributed 0 runs amid spectator reactions [EVT_0340].\n* **MATCH009 (Team D, Over 19):** Player 9 executed an over completed event that contributed 0 runs amid spectator reactions [EVT_0414].\n* **MATCH007 (Team C, Over 28):** Player 5 performed a run scored event resulting in 0 runs, while a six hit simultaneously occurred [EVT_0315].\n* **MATCH001 (Team D, Over 11):** Player 5 executed a boundary hit that contributed 0 runs amid spectator reactions [EVT_0018]."
+  }
+]

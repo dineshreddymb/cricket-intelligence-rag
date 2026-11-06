@@ -1,0 +1,43 @@
+# =============================================================================
+# Containerfile.backend — Django REST Framework Backend Service
+# =============================================================================
+FROM python:3.10-slim
+
+# Prevent Python from writing .pyc files and buffer stdout/stderr
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
+
+WORKDIR /app
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    curl \
+    build-essential \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copy requirements and install
+COPY requirements/ /app/requirements/
+COPY requirements.txt /app/
+RUN pip install --no-cache-dir --upgrade pip && \
+    pip install --no-cache-dir -r requirements/base.txt
+
+# Copy application source code
+COPY config/ /app/config/
+COPY ingestion/ /app/ingestion/
+COPY database/ /app/database/
+COPY vector_store/ /app/vector_store/
+COPY retrieval/ /app/retrieval/
+COPY rag/ /app/rag/
+COPY api/ /app/api/
+COPY cricket_search/ /app/cricket_search/
+COPY manage.py /app/
+COPY cricket_log.txt /app/
+
+EXPOSE 8000
+
+# Healthcheck
+HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 \
+    CMD curl -f http://localhost:8000/api/v1/health/ || exit 1
+
+# Run Django development server (or gunicorn for production)
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]

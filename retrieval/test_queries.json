@@ -1,0 +1,72 @@
+[
+  {
+    "id": "Q1",
+    "query": "LBW given events pending review",
+    "expected_event": "LBW given",
+    "expected_status": "pending review",
+    "description": "Checks retrieval of pending LBW reviews"
+  },
+  {
+    "id": "Q2",
+    "query": "Unexpected six hit altering game flow",
+    "expected_event": "six hit",
+    "expected_status": null,
+    "description": "Checks narrative commentary matching for dramatic six hit"
+  },
+  {
+    "id": "Q3",
+    "query": "stumping event in overcast condition",
+    "expected_event": "stumping",
+    "expected_status": null,
+    "description": "Checks retrieval of stumping with weather context"
+  },
+  {
+    "id": "Q4",
+    "query": "disputed no ball events",
+    "expected_event": "no ball",
+    "expected_status": "disputed",
+    "description": "Checks retrieval of disputed no balls"
+  },
+  {
+    "id": "Q5",
+    "query": "wicket taken by all-rounder",
+    "expected_event": "wicket taken",
+    "expected_status": null,
+    "description": "Checks role-aware retrieval in commentary"
+  },
+  {
+    "id": "Q6",
+    "query": "boundary hit at Stadium 4",
+    "expected_event": "boundary hit",
+    "expected_status": null,
+    "description": "Checks venue-aware retrieval in commentary"
+  },
+  {
+    "id": "Q7",
+    "query": "spectators reacted to boundary hit",
+    "expected_event": "boundary hit",
+    "expected_status": null,
+    "description": "Checks audience reaction template matching"
+  },
+  {
+    "id": "Q8",
+    "query": "catch taken in late overs",
+    "expected_event": "catch taken",
+    "expected_status": null,
+    "description": "Checks catch events"
+  },
+  {
+    "id": "Q9",
+    "query": "wide bowled in MATCH001",
+    "expected_event": "wide",
+    "expected_status": null,
+    "description": "Checks wide event retrieval with match context"
+  },
+  {
+    "id": "Q10",
+    "query": "championship final goal scored by striker in extra time",
+    "expected_event": null,
+    "expected_status": null,
+    "description": "Negative control query (football/soccer) to verify low confidence / relevance drop"
+  }
+]

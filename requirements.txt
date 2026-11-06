@@ -1,0 +1,10 @@
+# =============================================================================
+# Cricket Log Semantic Search — Root Requirements
+# File: requirements.txt
+# =============================================================================
+# Standard root entry point for installing project dependencies.
+# Install with:
+#   pip install -r requirements.txt
+#
+# Module 1 includes development and testing dependencies:
+-r requirements/dev.txt

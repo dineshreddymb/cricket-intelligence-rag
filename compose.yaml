@@ -1,0 +1,127 @@
+# =============================================================================
+# Cricket Log Semantic Search — Multi-Container Compose Architecture
+# Compatible with both:
+#   podman compose up -d --build
+#   docker compose up -d --build
+# =============================================================================
+
+version: '3.8'
+
+services:
+  # ---------------------------------------------------------------------------
+  # 1. Authoritative Structured Database
+  # ---------------------------------------------------------------------------
+  mongodb:
+    image: mongo:6.0
+    container_name: cricket_mongodb
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_DATABASE: cricket_db
+    volumes:
+      - mongo_data:/data/db
+    networks:
+      - cricket_net
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # ---------------------------------------------------------------------------
+  # 2. Vector Database
+  # ---------------------------------------------------------------------------
+  qdrant:
+    image: qdrant/qdrant:v1.12.0
+    container_name: cricket_qdrant
+    restart: unless-stopped
+    ports:
+      - "6333:6333"
+      - "6334:6334"
+    volumes:
+      - qdrant_data:/qdrant/storage
+    networks:
+      - cricket_net
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:6333/healthz || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # ---------------------------------------------------------------------------
+  # 3. Django REST Framework Backend API
+  # ---------------------------------------------------------------------------
+  backend:
+    build:
+      context: .
+      dockerfile: Containerfile.backend
+    container_name: cricket_backend
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      - DJANGO_DEBUG=False
+      - DJANGO_ALLOWED_HOSTS=*
+      - MONGODB_URI=mongodb://mongodb:27017
+      - MONGODB_DB_NAME=cricket_db
+      - QDRANT_HOST=qdrant
+      - QDRANT_PORT=6333
+      - QDRANT_COLLECTION_NAME=cricket_events
+      - EMBEDDING_MODEL_NAME=sentence-transformers/all-MiniLM-L6-v2
+    env_file:
+      - .env
+    depends_on:
+      mongodb:
+        condition: service_healthy
+      qdrant:
+        condition: service_healthy
+    networks:
+      - cricket_net
+
+  # ---------------------------------------------------------------------------
+  # 4. Streamlit Interactive Web Frontend
+  # ---------------------------------------------------------------------------
+  frontend:
+    build:
+      context: .
+      dockerfile: Containerfile.frontend
+    container_name: cricket_frontend
+    restart: unless-stopped
+    ports:
+      - "8501:8501"
+    environment:
+      - API_BASE_URL=http://backend:8000
+    depends_on:
+      - backend
+    networks:
+      - cricket_net
+
+  # ---------------------------------------------------------------------------
+  # 5. Model Context Protocol (MCP) Server
+  # ---------------------------------------------------------------------------
+  mcp_server:
+    build:
+      context: .
+      dockerfile: Containerfile.mcp
+    container_name: cricket_mcp_server
+    restart: unless-stopped
+    environment:
+      - API_BASE_URL=http://backend:8000
+    depends_on:
+      - backend
+    networks:
+      - cricket_net
+
+# -----------------------------------------------------------------------------
+# Networks and Persistent Volumes
+# -----------------------------------------------------------------------------
+networks:
+  cricket_net:
+    driver: bridge
+
+volumes:
+  mongo_data:
+    driver: local
+  qdrant_data:
+    driver: local

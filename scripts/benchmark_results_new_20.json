@@ -1,0 +1,1047 @@
+{
+  "total_queries": 20,
+  "passed_queries": 20,
+  "pass_rate_percentage": 100.0,
+  "category_summary": {
+    "Player-focused": {
+      "total": 5,
+      "passed": 5,
+      "accuracy_pct": 100.0,
+      "avg_precision": 100.0
+    },
+    "Venue and weather-based": {
+      "total": 4,
+      "passed": 4,
+      "accuracy_pct": 100.0,
+      "avg_precision": 95.0
+    },
+    "Match, over and time-based": {
+      "total": 4,
+      "passed": 4,
+      "accuracy_pct": 100.0,
+      "avg_precision": 95.0
+    },
+    "Event and status combinations": {
+      "total": 4,
+      "passed": 4,
+      "accuracy_pct": 100.0,
+      "avg_precision": 100.0
+    },
+    "Deeper retrieval and data understanding": {
+      "total": 3,
+      "passed": 3,
+      "accuracy_pct": 100.0,
+      "avg_precision": 100.0
+    }
+  },
+  "results": [
+    {
+      "id": "Q26",
+      "category": "Player-focused",
+      "query": "What kind of incidents was Player 10 involved in across the matches?",
+      "description": "Incidents involving Player 10 across all matches (51 records in total)",
+      "router_intent": "hybrid",
+      "extracted_entities": {
+        "player": "Player 10",
+        "team": null,
+        "teams": [],
+        "match": null,
+        "event": null,
+        "status": null,
+        "statuses": [],
+        "overs": [
+          null,
+          null
+        ],
+        "venue": null,
+        "weather": null
+      },
+      "ground_truth_count": 51,
+      "ground_truth_sample": [
+        "EVT_0010",
+        "EVT_0017",
+        "EVT_0025",
+        "EVT_0030",
+        "EVT_0040"
+      ],
+      "retrieved_chunk_ids": [
+        "EVT_0302",
+        "EVT_0083",
+        "EVT_0157",
+        "EVT_0344",
+        "EVT_0492"
+      ],
+      "retrieval_precision_at_k": 1.0,
+      "cited_evidence": [
+        "EVT_0302",
+        "EVT_0083",
+        "EVT_0157",
+        "EVT_0344",
+        "EVT_0492"
+      ],
+      "groundedness_score": 1.0,
+      "model_used": "gemini-3.5-flash-lite",
+      "latency_seconds": 6.9,
+      "answer": "Based on the provided match records, Player 10 was involved in the following incidents:\n* A boundary hit in over 10 for Team A during MATCH007 [EVT_0302].\n* A boundary hit in over 12 for Team D during MATCH002 [EVT_0083].\n* A wide event in over 46 for Team A during MATCH004 [EVT_0157].\n* A six hit in over 3 for Team A during MATCH007 [EVT_0344].\n* A wide event in over 33 for Team C during MATCH010 [EVT_0492].",
+      "passed": true
+    },
+    {
+      "id": "Q27",
+      "category": "Player-focused",
+      "query": "Can you show me all the recorded activities involving Player 5 from Team C?",
+      "description": "Activities involving Player 5 from Team C (14 records)",
+      "router_intent": "hybrid",
+      "extracted_entities": {
+        "player": "Player 5",
+        "team": "Team C",
+        "teams": [
+          "Team C"
+        ],
+        "match": null,
+        "event": null,
+        "status": null,
+        "statuses": [],
+        "overs": [
+          null,
+          null
+        ],
+        "venue": null,
+        "weather": null
+      },
+      "ground_truth_count": 14,
+      "ground_truth_sample": [
+        "EVT_0028",
+        "EVT_0094",
+        "EVT_0112",
+        "EVT_0164",
+        "EVT_0165"
+      ],
+      "retrieved_chunk_ids": [
+        "EVT_0223",
+        "EVT_0112",
+        "EVT_0417",
+        "EVT_0165",
+        "EVT_0315"
+      ],
+      "retrieval_precision_at_k": 1.0,
+      "cited_evidence": [
+        "EVT_0223",
+        "EVT_0112",
+        "EVT_0417",
+        "EVT_0165",
+        "EVT_0315"
+      ],
+      "groundedness_score": 1.0,
+      "model_used": "gemini-3.5-flash-lite",
+      "latency_seconds": 2.06,
+      "answer": "Based on the provided records, the recorded activities involving Player 5 from Team C are:\n\n* In MATCH005, Player 5 was involved in a wicket taken during over 24, with 2 runs scored and a status of \"pending review\" [Evidence EVT_0223].\n* In MATCH003, Player 5 was involved in an over completed during over 24, with 4 runs and a status of \"disputed\" [Evidence EVT_0112].\n* In MATCH009, Player 5 was involved in an LBW given during over 23, with 4 runs and a status of \"confirmed\" [Evidence EVT_0417].\n* In MATCH004, Player 5 performed an over completed during over 4, with 4 runs and a status of \"pending review\" (alongside another wicket taken event) [Evidence EVT_0165].\n* In MATCH007, Player 5 performed a run scored during over 28, with 0 runs and a status of \"verified\" (alongside a six hit event) [Evidence EVT_0315].",
+      "passed": true
+    },
+    {
+      "id": "Q28",
+      "category": "Player-focused",
+      "query": "Find incidents where players identified as bowlers were involved in cricket events.",
+      "description": "Incidents where player role is explicitly identified as bowler (17 records)",
+      "router_intent": "hybrid",
+      "extracted_entities": {
+        "player": null,
+        "team": null,
+        "teams": [],
+        "match": null,
+        "event": null,
+        "status": null,
+        "statuses": [],
+        "overs": [
+          null,
+          null
+        ],
+        "venue": null,
+        "weather": null
+      },
+      "ground_truth_count": 17,
+      "ground_truth_sample": [
+        "EVT_0005",
+        "EVT_0022",
+        "EVT_0125",
+        "EVT_0158",
+        "EVT_0181"
+      ],
+      "retrieved_chunk_ids": [
+        "EVT_0297",
+        "EVT_0181",
+        "EVT_0005",
+        "EVT_0022",
+        "EVT_0403"
+      ],
+      "retrieval_precision_at_k": 1.0,
+      "cited_evidence": [
+        "EVT_0297",
+        "EVT_0181",
+        "EVT_0005",
+        "EVT_0022",
+        "EVT_0403"
+      ],
+      "groundedness_score": 1.0,
+      "model_used": "gemini-3.5-flash-lite",
+      "latency_seconds": 1.49,
+      "answer": "Based on the provided records, the following incidents involve players identified as bowlers:\n\n* Player 2 (Team D, MATCH006) hit a boundary in over 43 [Evidence EVT_0297].\n* Player 7 (Team D, MATCH004) took a catch in over 41 [Evidence EVT_0181].\n* Player 6 (Team A, MATCH001) hit a six in over 48 [Evidence EVT_0005].\n* Player 1 (Team D, MATCH001) took a catch in over 21 [Evidence EVT_0022].\n* Player 1 (Team C, MATCH009) took a catch in over 50 [Evidence EVT_0403].",
+      "passed": true
+    },
+    {
+      "id": "Q29",
+      "category": "Player-focused",
+      "query": "Were any fielders involved in stumping or catch-related incidents?",
+      "description": "Fielders involved in stumping or catch taken events (4 records in ground truth)",
+      "router_intent": "hybrid",
+      "extracted_entities": {
+        "player": null,
+        "team": null,
+        "teams": [],
+        "match": null,
+        "event": "fielding dismissals",
+        "status": null,
+        "statuses": [],
+        "overs": [
+          null,
+          null
+        ],
+        "venue": null,
+        "weather": null
+      },
+      "ground_truth_count": 4,
+      "ground_truth_sample": [
+        "EVT_0266",
+        "EVT_0377",
+        "EVT_0386",
+        "EVT_0455"
+      ],
+      "retrieved_chunk_ids": [
+        "EVT_0386",
+        "EVT_0266",
+        "EVT_0377",
+        "EVT_0455"
+      ],
+      "retrieval_precision_at_k": 1.0,
+      "cited_evidence": [
+        "EVT_0386",
+        "EVT_0266",
+        "EVT_0377",
+        "EVT_0455"
+      ],
+      "groundedness_score": 1.0,
+      "model_used": "gemini-3.5-flash-lite",
+      "latency_seconds": 1.08,
+      "answer": "Yes, fielders were involved in stumping and catch-related incidents:\n\n* **Stumping:** \n  * Player 11 (Team D, role: fielder) was involved in a stumping event in over 36 [Evidence EVT_0386].\n  * Player 5 (Team C, role: fielder) performed a stumping in over 24 [Evidence EVT_0266].\n\n* **Catch-related incidents:** \n  * Player 3 (Team B, role: fielder) took a catch in over 39 [Evidence EVT_0377].\n  * Player 4 (Team D, role: fielder) took a catch in over 36 [Evidence EVT_0455].",
+      "passed": true
+    },
+    {
+      "id": "Q30",
+      "category": "Player-focused",
+      "query": "Which players were involved in multiple types of events in the same match?",
+      "description": "Players involved in distinct event types within the same match",
+      "router_intent": "semantic_rag",
+      "extracted_entities": {
+        "player": null,
+        "team": null,
+        "teams": [],
+        "match": null,
+        "event": null,
+        "status": null,
+        "statuses": [],
+        "overs": [
+          null,
+          null
+        ],
+        "venue": null,
+        "weather": null
+      },
+      "ground_truth_count": 500,
+      "ground_truth_sample": [
+        "EVT_0001",
+        "EVT_0002",
+        "EVT_0003",
+        "EVT_0004",
+        "EVT_0005"
+      ],
+      "retrieved_chunk_ids": [
+        "EVT_0495",
+        "EVT_0452",
+        "EVT_0254",
+        "EVT_0404",
+        "EVT_0045"
+      ],
+      "retrieval_precision_at_k": 1.0,
+      "cited_evidence": [
+        "EVT_0495",
+        "EVT_0452",
+        "EVT_0254",
+        "EVT_0404",
+        "EVT_0045"
+      ],
+      "groundedness_score": 1.0,
+      "model_used": "gemini-3.5-flash-lite",
+      "latency_seconds": 1.68,
+      "answer": "Based on the provided evidence, the following players were involved in matches with multiple events observed simultaneously:\n* **Player 4** (Team D, MATCH010) performed a six hit while another wide occurred in over 2 [Evidence EVT_0495].\n* **Player 1** (Team D, MATCH010) performed a stumping while another no ball occurred in over 12 [Evidence EVT_0452].\n* **Player 1** (Team A, MATCH006) performed a stumping while another no ball occurred in over 43 [Evidence EVT_0254].\n* **Player 6** (Team A, MATCH009) performed a six hit while another wide occurred in over 28 [Evidence EVT_0404].\n* **Player 10** (Team A, MATCH001) performed a six hit while another wide occurred in over 16 [Evidence EVT_0045].",
+      "passed": true
+    },
+    {
+      "id": "Q31",
+      "category": "Venue and weather-based",
+      "query": "Show me the cricket incidents that happened at Stadium 2.",
+      "description": "Cricket incidents taking place at Stadium 2 (17 records)",
+      "router_intent": "semantic_rag",
+      "extracted_entities": {
+        "player": null,
+        "team": null,
+        "teams": [],
+        "match": null,
+        "event": null,
+        "status": null,
+        "statuses": [],
+        "overs": [
+          null,
+          null
+        ],
+        "venue": "Stadium 2",
+        "weather": null
+      },
+      "ground_truth_count": 17,
+      "ground_truth_sample": [
+        "EVT_0011",
+        "EVT_0032",
+        "EVT_0046",
+        "EVT_0048",
+        "EVT_0101"
+      ],
+      "retrieved_chunk_ids": [
+        "EVT_0132",
+        "EVT_0101",
+        "EVT_0447",
+        "EVT_0393",
+        "EVT_0048"
+      ],
+      "retrieval_precision_at_k": 1.0,
+      "cited_evidence": [
+        "EVT_0132",
+        "EVT_0101",
+        "EVT_0447",
+        "EVT_0393",
+        "EVT_0048"
+      ],
+      "groundedness_score": 1.0,
+      "model_used": "gemini-3.5-flash-lite",
+      "latency_seconds": 1.37,
+      "answer": "Based on the provided evidence, the cricket incidents that happened at Stadium 2 are:\n\n* Player 9 (Team A) was involved in a boundary hit worth 4 runs during over 5 in MATCH003 [Evidence EVT_0132].\n* Player 3 (Team C) was involved in a boundary hit during over 36 in MATCH003 [Evidence EVT_0101].\n* Player 9 (Team C) was involved in a boundary hit worth 4 runs during over 23 in MATCH009 [Evidence EVT_0447].\n* Player 8 (Team D) was involved in a boundary hit worth 6 runs during over 6 in MATCH008 [Evidence EVT_0393].\n* Player 7 (Team C) was involved in a boundary hit worth 5 runs during over 9 in MATCH001 under overcast weather [Evidence EVT_0048].",
+      "passed": true
+    },
+    {
+      "id": "Q32",
+      "category": "Venue and weather-based",
+      "query": "Were there any incidents recorded during rainy weather?",
+      "description": "Incidents during rainy weather (6 records in dataset)",
+      "router_intent": "semantic_rag",
+      "extracted_entities": {
+        "player": null,
+        "team": null,
+        "teams": [],
+        "match": null,
+        "event": null,
+        "status": null,
+        "statuses": [],
+        "overs": [
+          null,
+          null
+        ],
+        "venue": null,
+        "weather": "rainy"
+      },
+      "ground_truth_count": 6,
+      "ground_truth_sample": [
+        "EVT_0260",
+        "EVT_0287",
+        "EVT_0292",
+        "EVT_0366",
+        "EVT_0383"
+      ],
+      "retrieved_chunk_ids": [
+        "EVT_0383",
+        "EVT_0292",
+        "EVT_0287",
+        "EVT_0392",
+        "EVT_0260"
+      ],
+      "retrieval_precision_at_k": 1.0,
+      "cited_evidence": [
+        "EVT_0383",
+        "EVT_0292",
+        "EVT_0287",
+        "EVT_0392",
+        "EVT_0260"
+      ],
+      "groundedness_score": 1.0,
+      "model_used": "gemini-3.5-flash-lite",
+      "latency_seconds": 1.14,
+      "answer": "Yes, multiple incidents were recorded during rainy weather:\n* Player 10 from Team A was involved in a catch taken during over 22 in rainy weather [Evidence EVT_0383].\n* Player 1 from Team D was involved in a catch taken during over 32 in rainy weather [Evidence EVT_0292].\n* Player 4 from Team B was involved in a wicket taken during over 44 at Stadium 1 in rainy weather [Evidence EVT_0287].\n* Player 2 from Team C was involved in a catch taken during over 41 in rainy weather [Evidence EVT_0392].\n* Player 1 from Team B was involved in a stumping during over 10 at Stadium 1 in rainy weather [Evidence EVT_0260].",
+      "passed": true
+    },
+    {
+      "id": "Q33",
+      "category": "Venue and weather-based",
+      "query": "Find events that took place in windy conditions at different stadiums.",
+      "description": "Events in windy conditions across stadiums (15 records)",
+      "router_intent": "semantic_rag",
+      "extracted_entities": {
+        "player": null,
+        "team": null,
+        "teams": [],
+        "match": null,
+        "event": null,
+        "status": null,
+        "statuses": [],
+        "overs": [
+          null,
+          null
+        ],
+        "venue": null,
+        "weather": "windy"
+      },
+      "ground_truth_count": 15,
+      "ground_truth_sample": [
+        "EVT_0126",
+        "EVT_0136",
+        "EVT_0146",
+        "EVT_0148",
+        "EVT_0157"
+      ],
+      "retrieved_chunk_ids": [
+        "EVT_0168",
+        "EVT_0170",
+        "EVT_0423",
+        "EVT_0136",
+        "EVT_0424"
+      ],
+      "retrieval_precision_at_k": 1.0,
+      "cited_evidence": [
+        "EVT_0168",
+        "EVT_0170",
+        "EVT_0423",
+        "EVT_0136",
+        "EVT_0424"
+      ],
+      "groundedness_score": 1.0,
+      "model_used": "gemini-3.5-flash-lite",
+      "latency_seconds": 1.48,
+      "answer": "Based on the provided evidence, the following events took place in windy conditions across different stadiums:\n\n* **Stadium 4**: \n  * Player 9 (Team C) was involved in a catch taken during over 36 [Evidence EVT_0168].\n  * Player 9 (Team C) was involved in a wicket taken during over 45 [Evidence EVT_0170].\n\n* **Stadium 2**:\n  * Player 8 (Team B) was involved in a catch taken during over 18 [Evidence EVT_0423].\n  * Player 4 (Team C) was involved in a stumping during over 36 [Evidence EVT_0136].\n  * Player 3 (Team A) was involved in a run scored during over 4 [Evidence EVT_0424].",
+      "passed": true
+    },
+    {
+      "id": "Q34",
+      "category": "Venue and weather-based",
+      "query": "Can you find incidents where the commentary mentions the weather conditions but doesn't specify the stadium?",
+      "description": "Incidents where commentary states weather condition without specifying stadium name (12 records)",
+      "router_intent": "semantic_rag",
+      "extracted_entities": {
+        "player": null,
+        "team": null,
+        "teams": [],
+        "match": null,
+        "event": null,
+        "status": null,
+        "statuses": [],
+        "overs": [
+          null,
+          null
+        ],
+        "venue": null,
+        "weather": null
+      },
+      "ground_truth_count": 12,
+      "ground_truth_sample": [
+        "EVT_0003",
+        "EVT_0037",
+        "EVT_0126",
+        "EVT_0148",
+        "EVT_0157"
+      ],
+      "retrieved_chunk_ids": [
+        "EVT_0292",
+        "EVT_0157",
+        "EVT_0037",
+        "EVT_0148",
+        "EVT_0212"
+      ],
+      "retrieval_precision_at_k": 0.8,
+      "cited_evidence": [
+        "EVT_0292",
+        "EVT_0157",
+        "EVT_0037",
+        "EVT_0148",
+        "EVT_0212"
+      ],
+      "groundedness_score": 1.0,
+      "model_used": "gemini-3.5-flash-lite",
+      "latency_seconds": 1.42,
+      "answer": "Yes, the provided records contain several incidents where the commentary mentions the weather conditions (such as rainy, windy, overcast, and humid) but does not specify the stadium/venue:\n\n* In MATCH006 (Team D, Player 1), the weather is mentioned as rainy [EVT_0292].\n* In MATCH004 (Team A, Player 10), the weather is mentioned as windy [EVT_0157].\n* In MATCH001 (Team C, Player 4), the weather is mentioned as overcast [EVT_0037].\n* In MATCH003 (Team B, Player 11), the weather is mentioned as windy [EVT_0148].\n* In MATCH005 (Team D, Player 10), the weather is mentioned as humid [EVT_0212].\n\nIn all of these cases, the venue is listed as \"Unspecified / Missing\" [EVT_0292, EVT_0157, EVT_0037, EVT_0148, EVT_0212].",
+      "passed": true
+    },
+    {
+      "id": "Q35",
+      "category": "Match, over and time-based",
+      "query": "What happened during the first five overs of MATCH006?",
+      "description": "Events occurring in overs 1-5 of MATCH006 (8 records)",
+      "router_intent": "hybrid",
+      "extracted_entities": {
+        "player": null,
+        "team": null,
+        "teams": [],
+        "match": "MATCH006",
+        "event": null,
+        "status": null,
+        "statuses": [],
+        "overs": [
+          1,
+          5
+        ],
+        "venue": null,
+        "weather": null
+      },
+      "ground_truth_count": 8,
+      "ground_truth_sample": [
+        "EVT_0253",
+        "EVT_0256",
+        "EVT_0259",
+        "EVT_0263",
+        "EVT_0271"
+      ],
+      "retrieved_chunk_ids": [
+        "EVT_0271",
+        "EVT_0283",
+        "EVT_0298",
+        "EVT_0263",
+        "EVT_0256"
+      ],
+      "retrieval_precision_at_k": 1.0,
+      "cited_evidence": [
+        "EVT_0271",
+        "EVT_0283",
+        "EVT_0298",
+        "EVT_0263",
+        "EVT_0256"
+      ],
+      "groundedness_score": 1.0,
+      "model_used": "gemini-3.5-flash-lite",
+      "latency_seconds": 1.29,
+      "answer": "Based on the provided match event logs for MATCH006, the following events occurred during the first five overs:\n\n* **Over 1:** Player 11 (Team B) bowled a wide, adding 0 runs [Evidence EVT_0256].\n* **Over 2:** Player 5 (Team B), playing as a batsman, scored 0 runs [Evidence EVT_0263]. Additionally, Player 11 (Team A) hit a boundary for 6 runs, and another six was hit in the same over (status: pending review) [Evidence EVT_0271].\n* **Over 3:** Player 4 (Team C) hit a six for 6 runs (status: confirmed), and a wicket was also taken in this over [Evidence EVT_0283].\n* **Over 5:** Player 10 (Team D) was involved in an LBW given event, resulting in 4 runs (status: confirmed) [Evidence EVT_0298].",
+      "passed": true
+    },
+    {
+      "id": "Q36",
+      "category": "Match, over and time-based",
+      "query": "Show me the incidents that took place in the final ten overs of MATCH003.",
+      "description": "Events occurring in final 10 overs (41-50) of MATCH003 (13 records)",
+      "router_intent": "hybrid",
+      "extracted_entities": {
+        "player": null,
+        "team": null,
+        "teams": [],
+        "match": "MATCH003",
+        "event": null,
+        "status": null,
+        "statuses": [],
+        "overs": [
+          41,
+          50
+        ],
+        "venue": null,
+        "weather": null
+      },
+      "ground_truth_count": 13,
+      "ground_truth_sample": [
+        "EVT_0105",
+        "EVT_0116",
+        "EVT_0118",
+        "EVT_0120",
+        "EVT_0122"
+      ],
+      "retrieved_chunk_ids": [
+        "EVT_0150",
+        "EVT_0122",
+        "EVT_0120",
+        "EVT_0141",
+        "EVT_0116"
+      ],
+      "retrieval_precision_at_k": 1.0,
+      "cited_evidence": [
+        "EVT_0150",
+        "EVT_0122",
+        "EVT_0120",
+        "EVT_0141",
+        "EVT_0116"
+      ],
+      "groundedness_score": 1.0,
+      "model_used": "gemini-3.5-flash-lite",
+      "latency_seconds": 1.22,
+      "answer": "Based on the provided match event logs for MATCH003, the incidents that took place in the final ten overs (overs 41 through 50) are:\n\n* **Over 43:** Player 3 of Team D was involved in a wicket taken [EVT_0141].\n* **Over 46:** Player 8 of Team D was involved in a wide [EVT_0116].\n* **Over 47:** Player 6 of Team C performed a no ball [EVT_0122].\n* **Over 48:** Player 7 of Team A performed a boundary hit, alongside a wide [EVT_0150].\n* **Over 50:** Player 6 of Team B was given LBW, alongside a six hit [EVT_0120].",
+      "passed": true
+    },
+    {
+      "id": "Q37",
+      "category": "Match, over and time-based",
+      "query": "Were there any important events recorded on 30 September 2025?",
+      "description": "Events recorded on date 30 September 2025 (46 records)",
+      "router_intent": "semantic_rag",
+      "extracted_entities": {
+        "player": null,
+        "team": null,
+        "teams": [],
+        "match": null,
+        "event": null,
+        "status": null,
+        "statuses": [],
+        "overs": [
+          null,
+          null
+        ],
+        "venue": null,
+        "weather": null
+      },
+      "ground_truth_count": 34,
+      "ground_truth_sample": [
+        "EVT_0027",
+        "EVT_0041",
+        "EVT_0052",
+        "EVT_0066",
+        "EVT_0068"
+      ],
+      "retrieved_chunk_ids": [
+        "EVT_0199",
+        "EVT_0452",
+        "EVT_0254",
+        "EVT_0150",
+        "EVT_0478"
+      ],
+      "retrieval_precision_at_k": 0.8,
+      "cited_evidence": [
+        "EVT_0199",
+        "EVT_0452",
+        "EVT_0254",
+        "EVT_0150",
+        "EVT_0478"
+      ],
+      "groundedness_score": 1.0,
+      "model_used": "gemini-3.5-flash-lite",
+      "latency_seconds": 1.54,
+      "answer": "Yes, the following events were recorded on September 30, 2025 (2025-09-30):\n\n* In MATCH010, Player 1 (Team D) performed a stumping during over 12, which was recorded as disputed [Evidence EVT_0452].\n* In MATCH006, Player 1 (Team A) performed a stumping during over 43, which was verified [Evidence EVT_0254].\n* In MATCH003, Player 7 (Team A) performed a boundary hit during over 48, which was confirmed [Evidence EVT_0150].\n* In MATCH010, Player 7 (Team D) performed a wicket taken during over 49, which was disputed [Evidence EVT_0478].",
+      "passed": true
+    },
+    {
+      "id": "Q38",
+      "category": "Match, over and time-based",
+      "query": "Find incidents involving Team D players between overs 35 and 45.",
+      "description": "Team D events occurring between overs 35 and 45 (39 records)",
+      "router_intent": "hybrid",
+      "extracted_entities": {
+        "player": null,
+        "team": "Team D",
+        "teams": [
+          "Team D"
+        ],
+        "match": null,
+        "event": null,
+        "status": null,
+        "statuses": [],
+        "overs": [
+          35,
+          45
+        ],
+        "venue": null,
+        "weather": null
+      },
+      "ground_truth_count": 39,
+      "ground_truth_sample": [
+        "EVT_0067",
+        "EVT_0080",
+        "EVT_0100",
+        "EVT_0117",
+        "EVT_0118"
+      ],
+      "retrieved_chunk_ids": [
+        "EVT_0407",
+        "EVT_0134",
+        "EVT_0118",
+        "EVT_0385",
+        "EVT_0456"
+      ],
+      "retrieval_precision_at_k": 1.0,
+      "cited_evidence": [
+        "EVT_0407",
+        "EVT_0134",
+        "EVT_0118",
+        "EVT_0385",
+        "EVT_0456"
+      ],
+      "groundedness_score": 1.0,
+      "model_used": "gemini-3.5-flash-lite",
+      "latency_seconds": 1.62,
+      "answer": "Based on the provided records, the following incidents involve Team D players between overs 35 and 45:\n\n* **Over 42 (MATCH010):** Player 2 performed a six hit, contributing 3 runs [Evidence EVT_0456].\n* **Over 44 (MATCH008):** Player 11 performed a stumping, contributing 4 runs [Evidence EVT_0385].\n* **Over 45 (MATCH003):** Player 7 executed a wide, contributing 3 runs [Evidence EVT_0134].\n* **Over 45 (MATCH003):** Player 1 performed a stumping, contributing 4 runs [Evidence EVT_0118].\n* **Over 45 (MATCH009):** Player 9 performed a catch taken, contributing 1 run [Evidence EVT_0407].",
+      "passed": true
+    },
+    {
+      "id": "Q39",
+      "category": "Event and status combinations",
+      "query": "Can you find boundary-hit incidents that were either disputed or awaiting review?",
+      "description": "Boundary hit events with status disputed or pending review (29 records)",
+      "router_intent": "semantic_rag",
+      "extracted_entities": {
+        "player": null,
+        "team": null,
+        "teams": [],
+        "match": null,
+        "event": "boundary hit",
+        "status": "pending review",
+        "statuses": [
+          "pending review",
+          "disputed"
+        ],
+        "overs": [
+          null,
+          null
+        ],
+        "venue": null,
+        "weather": null
+      },
+      "ground_truth_count": 29,
+      "ground_truth_sample": [
+        "EVT_0012",
+        "EVT_0018",
+        "EVT_0048",
+        "EVT_0063",
+        "EVT_0071"
+      ],
+      "retrieved_chunk_ids": [
+        "EVT_0206",
+        "EVT_0271",
+        "EVT_0012",
+        "EVT_0425",
+        "EVT_0459"
+      ],
+      "retrieval_precision_at_k": 1.0,
+      "cited_evidence": [
+        "EVT_0206",
+        "EVT_0271",
+        "EVT_0012",
+        "EVT_0425",
+        "EVT_0459"
+      ],
+      "groundedness_score": 1.0,
+      "model_used": "gemini-3.5-flash-lite",
+      "latency_seconds": 1.6,
+      "answer": "Yes, the following boundary-hit incidents were either disputed or pending review based on the provided records:\n\n* **MATCH005**: Player 8 (Team D) hit a boundary for 3 runs in over 13, with a status of \"disputed\" [EVT_0206].\n* **MATCH006**: Player 11 (Team A) hit a boundary for 6 runs in over 2, with a status of \"pending review\" [EVT_0271].\n* **MATCH001**: Player 7 (Team C) hit a boundary for 6 runs in over 39, with a status of \"pending review\" [EVT_0012].\n* **MATCH009**: Player 1 (Team B) hit a boundary for 2 runs in over 19, with a status of \"pending review\" [EVT_0425].\n* **MATCH010**: Player 4 (Team C) hit a boundary for 6 runs in over 49, with a status of \"disputed\" [EVT_0459].",
+      "passed": true
+    },
+    {
+      "id": "Q40",
+      "category": "Event and status combinations",
+      "query": "Show me all confirmed incidents involving wide or no-ball deliveries.",
+      "description": "Confirmed wide or no-ball deliveries (30 records)",
+      "router_intent": "semantic_rag",
+      "extracted_entities": {
+        "player": null,
+        "team": null,
+        "teams": [],
+        "match": null,
+        "event": "extras",
+        "status": "confirmed",
+        "statuses": [
+          "confirmed"
+        ],
+        "overs": [
+          null,
+          null
+        ],
+        "venue": null,
+        "weather": null
+      },
+      "ground_truth_count": 30,
+      "ground_truth_sample": [
+        "EVT_0019",
+        "EVT_0097",
+        "EVT_0114",
+        "EVT_0116",
+        "EVT_0155"
+      ],
+      "retrieved_chunk_ids": [
+        "EVT_0019",
+        "EVT_0190",
+        "EVT_0428",
+        "EVT_0412",
+        "EVT_0476"
+      ],
+      "retrieval_precision_at_k": 1.0,
+      "cited_evidence": [
+        "EVT_0019",
+        "EVT_0190",
+        "EVT_0428",
+        "EVT_0412",
+        "EVT_0476"
+      ],
+      "groundedness_score": 1.0,
+      "model_used": "gemini-3.5-flash-lite",
+      "latency_seconds": 1.77,
+      "answer": "Based on the provided records, the confirmed incidents involving no-ball deliveries are:\n\n* Player 1 (Team A) in over 2 during MATCH001 resulted in 3 runs [EVT_0019].\n* Player 11 (Team D) in over 27 during MATCH004 resulted in 3 runs [EVT_0190].\n* Player 10 (Team C) in over 2 during MATCH009 resulted in 4 runs [EVT_0412].\n* Player 11 (Team D) in over 18 during MATCH009 resulted in 5 runs [EVT_0428].\n* Player 7 (Team A) in over 31 during MATCH010 resulted in 3 runs [EVT_0476].\n\nThe provided records do not contain evidence of wide ball deliveries.",
+      "passed": true
+    },
+    {
+      "id": "Q41",
+      "category": "Event and status combinations",
+      "query": "Were there any wicket-related incidents that were marked as verified?",
+      "description": "Verified dismissals/wicket-related incidents (51 records)",
+      "router_intent": "semantic_rag",
+      "extracted_entities": {
+        "player": null,
+        "team": null,
+        "teams": [],
+        "match": null,
+        "event": "wicket taken",
+        "status": "verified",
+        "statuses": [
+          "verified"
+        ],
+        "overs": [
+          null,
+          null
+        ],
+        "venue": null,
+        "weather": null
+      },
+      "ground_truth_count": 51,
+      "ground_truth_sample": [
+        "EVT_0002",
+        "EVT_0004",
+        "EVT_0008",
+        "EVT_0010",
+        "EVT_0036"
+      ],
+      "retrieved_chunk_ids": [
+        "EVT_0265",
+        "EVT_0211",
+        "EVT_0391",
+        "EVT_0111",
+        "EVT_0361"
+      ],
+      "retrieval_precision_at_k": 1.0,
+      "cited_evidence": [
+        "EVT_0265",
+        "EVT_0211",
+        "EVT_0391",
+        "EVT_0111",
+        "EVT_0361"
+      ],
+      "groundedness_score": 1.0,
+      "model_used": "gemini-3.5-flash-lite",
+      "latency_seconds": 1.21,
+      "answer": "Yes, there were multiple wicket-related incidents marked as verified:\n* Player 2 (Team A, MATCH005) performed a wicket taken in over 42 [EVT_0211].\n* Player 6 (Team B, MATCH003) performed a wicket taken in over 19 [EVT_0111].\n* Player 8 (Team B, MATCH006) performed a wicket taken in over 26 [EVT_0265].\n* Player 1 (Team B, MATCH008) performed a wicket taken in over 14 [EVT_0361].\n* Player 4 (Team D, MATCH008) performed a wicket taken in over 18 [EVT_0391].",
+      "passed": true
+    },
+    {
+      "id": "Q42",
+      "category": "Event and status combinations",
+      "query": "Find examples where a player was involved in an over-completed event.",
+      "description": "Incidents where event type is over completed (49 records)",
+      "router_intent": "semantic_rag",
+      "extracted_entities": {
+        "player": null,
+        "team": null,
+        "teams": [],
+        "match": null,
+        "event": "over completed",
+        "status": null,
+        "statuses": [],
+        "overs": [
+          null,
+          null
+        ],
+        "venue": null,
+        "weather": null
+      },
+      "ground_truth_count": 49,
+      "ground_truth_sample": [
+        "EVT_0011",
+        "EVT_0014",
+        "EVT_0017",
+        "EVT_0043",
+        "EVT_0056"
+      ],
+      "retrieved_chunk_ids": [
+        "EVT_0160",
+        "EVT_0011",
+        "EVT_0112",
+        "EVT_0484",
+        "EVT_0146"
+      ],
+      "retrieval_precision_at_k": 1.0,
+      "cited_evidence": [
+        "EVT_0160",
+        "EVT_0011",
+        "EVT_0112",
+        "EVT_0484",
+        "EVT_0146"
+      ],
+      "groundedness_score": 1.0,
+      "model_used": "gemini-3.5-flash-lite",
+      "latency_seconds": 2.1,
+      "answer": "Based on the provided records, here are examples where a player was involved in an over-completed event:\n\n* Player 11 (Team C) was involved in an over-completed event in over 36 during MATCH004 [EVT_0160].\n* Player 2 (Team A) was involved in an over-completed event in over 15 at Stadium 2 during MATCH001 [EVT_0011].\n* Player 5 (Team C) was involved in an over-completed event in over 24 at Stadium 2 during MATCH003 [EVT_0112].\n* Player 5 (Team A) was involved in an over-completed event in over 1 at Stadium 3 during MATCH010 [EVT_0484].\n* Player 11 (Team A) was involved in an over-completed event in over 1 at Stadium 2 during MATCH003 [EVT_0146].",
+      "passed": true
+    },
+    {
+      "id": "Q43",
+      "category": "Deeper retrieval and data understanding",
+      "query": "Can you find records where the commentary describes an unexpected incident?",
+      "description": "Records where commentary explicitly notes unexpected events altering flow (83 records)",
+      "router_intent": "semantic_rag",
+      "extracted_entities": {
+        "player": null,
+        "team": null,
+        "teams": [],
+        "match": null,
+        "event": null,
+        "status": null,
+        "statuses": [],
+        "overs": [
+          null,
+          null
+        ],
+        "venue": null,
+        "weather": null
+      },
+      "ground_truth_count": 83,
+      "ground_truth_sample": [
+        "EVT_0002",
+        "EVT_0005",
+        "EVT_0007",
+        "EVT_0020",
+        "EVT_0022"
+      ],
+      "retrieved_chunk_ids": [
+        "EVT_0066",
+        "EVT_0102",
+        "EVT_0056",
+        "EVT_0067",
+        "EVT_0002"
+      ],
+      "retrieval_precision_at_k": 1.0,
+      "cited_evidence": [
+        "EVT_0066",
+        "EVT_0102",
+        "EVT_0056",
+        "EVT_0067",
+        "EVT_0002"
+      ],
+      "groundedness_score": 1.0,
+      "model_used": "gemini-3.5-flash-lite",
+      "latency_seconds": 2.3,
+      "answer": "Yes, the provided records contain several commentary entries describing unexpected incidents:\n\n* Player 2 (Team D) in MATCH002: \"Unexpected stumping by Player 2 (batsman) altered the flow of the game.\" [Evidence EVT_0066]\n* Player 10 (Team B) in MATCH003: \"Unexpected wicket taken by Player 10 (batsman) altered the flow of the game.\" [Evidence EVT_0102]\n* Player 10 (Team C) in MATCH002: \"Unexpected over completed by Player 10 (batsman) altered the flow of the game.\" [Evidence EVT_0056]\n* Player 8 (Team D) in MATCH002: \"Unexpected over completed by Player 8 (batsman) altered the flow of the game.\" [Evidence EVT_0067]\n* Player 7 (Team C) in MATCH001: \"Unexpected wicket taken by Player 7 (all-rounder) altered the flow of the game.\" [Evidence EVT_0002]",
+      "passed": true
+    },
+    {
+      "id": "Q44",
+      "category": "Deeper retrieval and data understanding",
+      "query": "Are there any records where the player's role is missing from the commentary?",
+      "description": "Records where commentary contains empty player role parentheses '()' (90 records)",
+      "router_intent": "semantic_rag",
+      "extracted_entities": {
+        "player": null,
+        "team": null,
+        "teams": [],
+        "match": null,
+        "event": null,
+        "status": null,
+        "statuses": [],
+        "overs": [
+          null,
+          null
+        ],
+        "venue": null,
+        "weather": null
+      },
+      "ground_truth_count": 90,
+      "ground_truth_sample": [
+        "EVT_0001",
+        "EVT_0007",
+        "EVT_0021",
+        "EVT_0027",
+        "EVT_0028"
+      ],
+      "retrieved_chunk_ids": [
+        "EVT_0193",
+        "EVT_0082",
+        "EVT_0320",
+        "EVT_0357",
+        "EVT_0094"
+      ],
+      "retrieval_precision_at_k": 1.0,
+      "cited_evidence": [
+        "EVT_0193",
+        "EVT_0082",
+        "EVT_0320",
+        "EVT_0357",
+        "EVT_0094"
+      ],
+      "groundedness_score": 1.0,
+      "model_used": "gemini-3.5-flash-lite",
+      "latency_seconds": 1.28,
+      "answer": "Yes, the player's role is unspecified or missing in all the provided records [EVT_0193, EVT_0082, EVT_0320, EVT_0357, EVT_0094].",
+      "passed": true
+    },
+    {
+      "id": "Q45",
+      "category": "Deeper retrieval and data understanding",
+      "query": "Show me incidents where the same player was involved in different event types under different status labels.",
+      "description": "Multi-event, multi-status relationship query across same player",
+      "router_intent": "semantic_rag",
+      "extracted_entities": {
+        "player": null,
+        "team": null,
+        "teams": [],
+        "match": null,
+        "event": null,
+        "status": null,
+        "statuses": [],
+        "overs": [
+          null,
+          null
+        ],
+        "venue": null,
+        "weather": null
+      },
+      "ground_truth_count": 500,
+      "ground_truth_sample": [
+        "EVT_0001",
+        "EVT_0002",
+        "EVT_0003",
+        "EVT_0004",
+        "EVT_0005"
+      ],
+      "retrieved_chunk_ids": [
+        "EVT_0003",
+        "EVT_0150",
+        "EVT_0434",
+        "EVT_0271",
+        "EVT_0160"
+      ],
+      "retrieval_precision_at_k": 1.0,
+      "cited_evidence": [
+        "EVT_0003",
+        "EVT_0150",
+        "EVT_0434",
+        "EVT_0271",
+        "EVT_0160"
+      ],
+      "groundedness_score": 1.0,
+      "model_used": "gemini-3.5-flash-lite",
+      "latency_seconds": 1.65,
+      "answer": "The provided records do not contain sufficient evidence to answer this question.",
+      "passed": true
+    }
+  ]
+}

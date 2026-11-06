@@ -1,0 +1,53 @@
+[
+  {
+    "id": "Q13",
+    "query": "Were there any six-hit incidents in Stadium 3 during sunny weather?",
+    "status": "PASS",
+    "cited": [],
+    "answer": "No relevant cricket events found in the dataset matching your question.",
+    "raw_count": 0
+  },
+  {
+    "id": "Q14",
+    "query": "Find wide-ball incidents that happened in the later overs.",
+    "status": "PASS",
+    "cited": [
+      "EVT_0477",
+      "EVT_0024",
+      "EVT_0384",
+      "EVT_0157",
+      "EVT_0492"
+    ],
+    "answer": "Based on the provided records, the wide-ball incidents that happened in the later overs are:\n\n* In MATCH001 (Over 45), Team C's Player 4 was involved in a wide resulting in 2 runs [Evidence EVT_0024].\n* In MATCH004 (Over 46), Team A's Player 10 was involved in a wide resulting in 2 runs during windy weather [Evidence EVT_0157].\n* In MATCH008 (Over 50), Team D's Player 8 was involved in a wide resulting in 0 runs [Evidence EVT_0384].\n* In MATCH010 (Over 50), Team D's Player 1 was involved in a wide resulting in 6 runs [Evidence EVT_0477].",
+    "raw_count": 5
+  },
+  {
+    "id": "Q17",
+    "query": "Which incidents are still awaiting verification, and what happened in those incidents?",
+    "status": "PASS",
+    "cited": [
+      "EVT_0023",
+      "EVT_0397",
+      "EVT_0065",
+      "EVT_0270",
+      "EVT_0271"
+    ],
+    "answer": "Based on the provided records, all listed incidents have a status of \"pending review\" (awaiting verification). The details of these incidents are as follows:\n\n* **MATCH001 (Over 25):** Player 6 performed a stumping, and another wicket was taken, yielding 3 runs [EVT_0023].\n* **MATCH002 (Over 46):** Player 3 took a wicket, and a boundary hit occurred, yielding 1 run [EVT_0065].\n* **MATCH006 (Over 8):** Player 3 took a wicket, and a boundary hit occurred, yielding 5 runs [EVT_0270].\n* **MATCH006 (Over 2):** Player 11 hit a boundary, and a six was hit, yielding 6 runs [EVT_0271].\n* **MATCH008 (Over 46):** Player 4 performed a stumping, and a six was hit, yielding 0 runs [EVT_0397].",
+    "raw_count": 5
+  },
+  {
+    "id": "Q18",
+    "query": "Compare the types of incidents recorded for Team A and Team B.",
+    "status": "PASS",
+    "cited": [
+      "EVT_0150",
+      "EVT_0183",
+      "EVT_0073",
+      "EVT_0010",
+      "EVT_0425",
+      "EVT_0429"
+    ],
+    "answer": "Based on the provided evidence, the recorded incidents for each team are as follows:\n\n* **Team A:**\n  * Player 7 performed a boundary hit in over 48 (Match MATCH003) [Evidence EVT_0150]. A wide also occurred in the same over [Evidence EVT_0150].\n  * Player 4 performed a six hit in over 7 (Match MATCH004), which was disputed [Evidence EVT_0183]. A stumping also occurred in the same over [Evidence EVT_0183].\n  * Player 1 performed a six hit in over 20 (Match MATCH002), which was verified [Evidence EVT_0073]. A no ball also occurred in the same over [Evidence EVT_0073].\n\n* **Team B:**\n  * Player 10 performed a stumping in over 19 (Match MATCH001), which was verified [Evidence EVT_0010]. A catch taken also occurred in the same over [Evidence EVT_0010].\n  * Player 1 performed a boundary hit in over 19 (Match MATCH009), which is pending review [Evidence EVT_0425]. An LBW given also occurred in the same over [Evidence EVT_0425].\n  * Player 10 performed a six hit in over 34 (Match MATCH009), which was verified [Evidence EVT_0429]. A no ball also occurred in the same over [Evidence EVT_0429].",
+    "raw_count": 6
+  }
+]

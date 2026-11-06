@@ -1,0 +1,112 @@
+# =============================================================================
+# Cricket Log Semantic Search — .gitignore
+# =============================================================================
+# This file tells Git which files and directories to never track.
+# It lives inside the project folder because the parent Git repository
+# (rooted at C:/Users/mbdin) covers this folder. We control what is
+# tracked from our project by scoping this .gitignore here.
+#
+# Rule: if in doubt, exclude it. Source code and documentation belong
+# in Git. Generated files, secrets, and environment binaries do not.
+# =============================================================================
+
+
+# =============================================================================
+# Virtual environment
+# =============================================================================
+# The venv/ directory contains a copy of Python and all installed packages.
+# It is specific to this machine's Python installation path and must never
+# be committed. Anyone else recreates it with:
+#   python -m venv venv
+#   pip install -r requirements/dev.txt
+venv/
+.venv/
+env/
+
+
+# =============================================================================
+# Secrets and credentials — CRITICAL
+# =============================================================================
+# .env contains real API keys (Gemini), database URIs and other credentials.
+# It must never appear in Git history. We use .env.example (committed) to
+# document which variables are needed without exposing values.
+.env
+
+# Also exclude any variant names someone might use accidentally
+*.env.local
+*.env.production
+*.env.staging
+
+
+# =============================================================================
+# Python bytecode and cache
+# =============================================================================
+# Python compiles .py files to .pyc bytecode for faster loading.
+# These files are machine-generated and machine-specific — not source code.
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extension build artefacts
+*.so
+
+
+# =============================================================================
+# pytest and testing artefacts
+# =============================================================================
+# pytest creates a .pytest_cache/ directory to store test state between runs.
+# This is a local performance cache, not part of the codebase.
+.pytest_cache/
+
+# Coverage report data files (created when running pytest --cov)
+.coverage
+.coverage.*
+htmlcov/
+
+
+# =============================================================================
+# Package build artefacts
+# =============================================================================
+# Created when packaging a Python project for distribution.
+# Not relevant here but excluded to prevent accidental inclusion.
+*.egg-info/
+dist/
+build/
+*.egg
+MANIFEST
+
+
+# =============================================================================
+# IDE and editor files
+# =============================================================================
+# Personal editor configuration is not project configuration.
+# Each developer uses their own tools.
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+
+# =============================================================================
+# Jupyter notebooks (if used for experimentation)
+# =============================================================================
+# Checkpoint directories created by Jupyter alongside notebooks
+.ipynb_checkpoints/
+
+
+# =============================================================================
+# Logs
+# =============================================================================
+# Log files should not accumulate in source control
+*.log
+logs/
+
+# =============================================================================
+# Local databases and runtime stores
+# =============================================================================
+data/qdrant_storage/
+*.sqlite
+*.sqlite3
+*.lock
